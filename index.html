@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthesize - Modern Landing Page</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom CSS to ensure Inter is used and smooth transitions */
+        :root {
+            font-family: 'Inter', sans-serif;
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, #6366f1, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+    <script>
+        // Simple script for mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- 1. Header (Sticky and Responsive) -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg backdrop-blur-md bg-opacity-90 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Brand -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-extrabold text-indigo-600 tracking-tight">
+                        Synthesize<span class="text-3xl font-light text-blue-500">.</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-sm font-medium text-gray-600 hover:text-indigo-600 transition duration-150">Features</a>
+                    <a href="#pricing" class="text-sm font-medium text-gray-600 hover:text-indigo-600 transition duration-150">Pricing</a>
+                    <a href="#about" class="text-sm font-medium text-gray-600 hover:text-indigo-600 transition duration-150">About Us</a>
+                    <a href="#contact" class="text-sm font-medium text-gray-600 hover:text-indigo-600 transition duration-150">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="#signup" class="px-4 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 transition duration-300 transform hover:scale-105">
+                        Get Started Free
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button type="button" class="md:hidden p-2 rounded-lg text-gray-500 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500" onclick="toggleMenu()">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">Features</a>
+                <a href="#pricing" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">Pricing</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">About Us</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">Contact</a>
+                <a href="#signup" class="block w-full text-center px-4 py-2 mt-2 font-semibold text-white bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 transition duration-300">
+                    Get Started Free
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section (The main visual and call to action) -->
+    <section class="py-20 sm:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Badge -->
+            <span class="inline-flex items-center px-3 py-1 mb-4 text-xs font-medium text-indigo-700 bg-indigo-100 rounded-full shadow-md">
+                🎉 New feature: AI-Powered Synthesis is Live!
+            </span>
+            <!-- Headline -->
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6">
+                <span class="block">Stop Juggling Tools.</span>
+                <span class="block text-gradient">Synthesize Your Workflow.</span>
+            </h1>
+            <!-- Subtitle -->
+            <p class="mt-4 text-xl sm:text-2xl text-gray-500 max-w-3xl mx-auto">
+                The all-in-one platform designed to centralize your projects, communications, and data analytics in one beautiful, cohesive space.
+            </p>
+
+            <!-- Main CTA Group -->
+            <div class="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#signup" class="w-full sm:w-auto px-8 py-3 text-lg font-bold text-white bg-indigo-600 rounded-xl shadow-xl ring-2 ring-indigo-500 ring-offset-2 hover:bg-indigo-700 transition duration-300 transform hover:scale-105">
+                    Start Your 14-Day Trial
+                </a>
+                <a href="#demo" class="w-full sm:w-auto px-8 py-3 text-lg font-medium text-indigo-600 bg-white border border-indigo-200 rounded-xl shadow-md hover:bg-indigo-50 transition duration-300">
+                    Watch a Demo
+                </a>
+            </div>
+
+            <!-- Placeholder Image for Visual Appeal -->
+            <div class="mt-16">
+                <img src="https://placehold.co/1200x600/E0E7FF/4F46E5?text=Dashboard+Preview" 
+                     alt="Synthesize App Dashboard Preview" 
+                     class="w-full h-auto rounded-3xl shadow-2xl ring-4 ring-indigo-100/50 object-cover mx-auto"
+                     loading="lazy"
+                     onerror="this.onerror=null; this.src='https://placehold.co/1200x600/E0E7FF/4F46E5?text=Clean+Interface+Design';"
+                >
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Features Section (Responsive Grid) -->
+    <section id="features" class="py-20 sm:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-center text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
+                Built for Efficiency, Designed for Clarity
+            </h2>
+            <p class="text-center text-xl text-gray-500 mb-16 max-w-2xl mx-auto">
+                Simplify the complex with three core functionalities that transform your day-to-day operations.
+            </p>
+
+            <!-- Feature Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+                <!-- Feature 1: Unified Inbox -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-600 bg-indigo-50 rounded-full p-3 inline-flex">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-1 12H4a2 2 0 01-2-2V6a2 2 0 012-2h16a2 2 0 012 2v12a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <h3 class="mt-6 text-xl font-bold text-gray-900">Unified Inbox</h3>
+                    <p class="mt-4 text-gray-500">
+                        Consolidate all customer queries, team notifications, and system alerts into one intelligent stream. Never miss a critical update again.
+                    </p>
+                </div>
+
+                <!-- Feature 2: Real-time Analytics -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-600 bg-blue-50 rounded-full p-3 inline-flex">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                    </div>
+                    <h3 class="mt-6 text-xl font-bold text-gray-900">Real-time Analytics</h3>
+                    <p class="mt-4 text-gray-500">
+                        Visualized data and customizable reports keep you informed of your performance metrics the moment they happen, not hours later.
+                    </p>
+                </div>
+
+                <!-- Feature 3: Collaborative Project Boards -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-green-600 bg-green-50 rounded-full p-3 inline-flex">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="mt-6 text-xl font-bold text-gray-900">Collaborative Boards</h3>
+                    <p class="mt-4 text-gray-500">
+                        Kanban boards, Gantt charts, and calendar views, all dynamically linked. Manage tasks, dependencies, and resources flawlessly.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Testimonial Section (Social Proof) -->
+    <section class="py-16 sm:py-20 bg-indigo-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <blockquote class="text-center">
+                <p class="text-3xl font-medium text-gray-900 italic leading-relaxed">
+                    "Synthesize cut our weekly project overhead by 40%. The unified view and instant reporting capabilities are exactly what we needed to scale efficiently."
+                </p>
+                <footer class="mt-8">
+                    <div class="flex items-center justify-center">
+                        <div class="flex-shrink-0">
+                            <!-- Placeholder Avatar -->
+                            <img class="h-10 w-10 rounded-full object-cover" 
+                                 src="https://placehold.co/40x40/9CA3AF/ffffff?text=JK" 
+                                 alt="Jana Kowalski"
+                                 loading="lazy"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/40x40/9CA3AF/ffffff?text=User';"
+                            >
+                        </div>
+                        <div class="ml-3 text-left">
+                            <div class="text-base font-semibold text-gray-900">Jana Kowalski</div>
+                            <div class="text-sm font-medium text-indigo-600">CTO, Nexus Corp</div>
+                        </div>
+                    </div>
+                </footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- 5. Final Call to Action / Pricing Preview -->
+    <section id="pricing" class="py-20 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-4">
+                Ready to Stop Fragmenting Your Work?
+            </h2>
+            <p class="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
+                Join thousands of teams who have already consolidated their stack and streamlined their operations.
+            </p>
+            <a href="#signup" class="px-10 py-4 text-xl font-bold text-white bg-blue-500 rounded-2xl shadow-2xl hover:bg-blue-600 transition duration-300 transform hover:scale-105">
+                Sign Up Now — It's Free for 14 Days
+            </a>
+        </div>
+    </section>
+
+    <!-- 6. Footer -->
+    <footer id="contact" class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8 mb-8">
+                <!-- Column 1: Brand -->
+                <div>
+                    <h3 class="text-2xl font-extrabold text-indigo-400 tracking-tight mb-4">Synthesize</h3>
+                    <p class="text-sm text-gray-400 max-w-xs">The unified platform for the modern, efficient team.</p>
+                </div>
+
+                <!-- Column 2: Product -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-200">Product</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-indigo-400 transition">Features</a></li>
+                        <li><a href="#" class="hover:text-indigo-400 transition">Pricing Plans</a></li>
+                        <li><a href="#" class="hover:text-indigo-400 transition">Integrations</a></li>
+                        <li><a href="#" class="hover:text-indigo-400 transition">Security</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Company -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-200">Company</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-indigo-400 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-indigo-400 transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-indigo-400 transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-indigo-400 transition">Partners</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Support -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-200">Support</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-indigo-400 transition">Help Center</a></li>
+                        <li><a href="#" class="hover:text-indigo-400 transition">API Documentation</a></li>
+                        <li><a href="#" class="hover:text-indigo-400 transition">Live Chat</a></li>
+                        <li><a href="mailto:support@synthesize.com" class="hover:text-indigo-400 transition">Email Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="flex flex-col sm:flex-row justify-between items-center text-sm text-gray-400">
+                <p>&copy; 2024 Synthesize, Inc. All rights reserved.</p>
+                <div class="mt-4 sm:mt-0 space-x-4">
+                    <a href="#" class="hover:text-indigo-400 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-indigo-400 transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
